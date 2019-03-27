@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue</title>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+	<input type="text" v-model.number="message" />
+  <button @click="clickButton()">Add</button>
+  <p>{{total}}</p>
+    </div>
+</body>
+<script type="text/javascript">
+    var myVue = new Vue({
+        el: "#app",
+	   data:{
+	     message:0,
+		 total:0
+		 },
+		methods:{
+        clickButton:function(){
+            this.total = this.message+this.total
+        }
+    }
+	})
+</script>
+</html>
